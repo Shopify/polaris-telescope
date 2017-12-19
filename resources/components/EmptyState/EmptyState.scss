@@ -1,0 +1,28 @@
+@import '../../assets/stylesheets/variables';
+
+.EmptyState {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: $spacing-half-tight;
+  animation-name: appearFromBottom;
+  animation-duration: $duration-long;
+}
+
+.EmptyStateMessageWrap{
+  margin-top: -20vh;
+}
+
+.Title {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: $spacing-tight;
+}
+
+.Message {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  opacity: 0.5;
+  max-width: 70vw;
+}

@@ -1,0 +1,36 @@
+// Spacing
+$unit: 6px;
+$spacing-extra-tight: $unit;
+$spacing-tight: $unit * 2;
+$spacing-half-tight: $unit * 3;
+$spacing: $unit * 4;
+
+// Colors
+$indigo-lighter: #f4f5fa;
+$indigo-light: #b3bcf5;
+$indigo: #5c6ac4;
+$indigo-dark: #4959bd;
+$purple-dark: #50248f;
+$grey: #a1acb8;
+$grey-dark: #637381;
+$grey-darker: #8c8c8c;
+
+// Durations
+$duration: 150ms;
+$duration-long: 300ms;
+
+// Easing
+$easing: cubic-bezier(0.64, 0, 0.35, 1);
+
+// Border Radius
+$border-radius: 3px;
+
+// Appear Animations
+@keyframes appear {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+@keyframes appearFromBottom {
+  from {opacity: 0; transform: translateY(3px)}
+  to {opacity: 1; transform: translateY(0px)}
+}

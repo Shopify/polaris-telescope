@@ -1,0 +1,33 @@
+@import '../../assets/stylesheets/variables';
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: $spacing-extra-tight $spacing-tight;
+  background: lighten($indigo, 25%);
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  font-weight: 300;
+  font-size: 0.75em;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition-property: background, border;
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+
+  &:hover {
+    background: $indigo;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $purple-dark;
+    outline: 0;
+    box-shadow: 0 0 0 1px $purple-dark;
+  }
+}
