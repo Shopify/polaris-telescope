@@ -36,7 +36,7 @@ This allows you, as a developer, to quickly grab and insert the basic react comp
 ![copy code - gif](https://user-images.githubusercontent.com/8864990/34141743-3c702c6c-e451-11e7-817a-6adb8661b50f.gif)
 
 ## Download, install, and use
-1. [Download the latest version and unzip the file](/docs/polarisInSketch.sketchplugin.zip?raw=true)
+1. [Download the latest version and unzip the file](https://github.com/Shopify/polaris-telescope/releases/latest/)
 2. Double click the `.sketchplugin` file.
 
 When updates are available, they will appear at the top right corner in Sketch.
