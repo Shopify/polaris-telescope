@@ -15,7 +15,7 @@ Any contributions are appreciated and encouraged.
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the [Code of Conduct document](https://github.com/Shopify/draggable/blob/master/CODE_OF_CONDUCT.md).
-By participating, you are expected to uphold this code. Please report unacceptable behaviour to mateus.ferreira@shopify.com or nikolas.klein@shopify.com.
+By participating, you are expected to uphold this code. Please report unacceptable behaviour to mateus.ferreira@shopify.com or kaelig.deloumeauprigent@shopify.com.
 
 ## How to contribute
 
