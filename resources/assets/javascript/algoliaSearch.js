@@ -4,7 +4,7 @@ const index = initialize();
 
 function initialize() {
   const client = algoliasearch('VPPOBYF1PX', '7b5cb1cfd32091ade772492262a88989');
-  return client.initIndex('polaris');
+  return client.initIndex('telescope');
 }
 
 export default function algoliaSearch(query) {
