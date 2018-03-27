@@ -3,7 +3,7 @@ import algoliasearch from 'algoliasearch';
 const index = initialize();
 
 function initialize() {
-  const client = algoliasearch('VPPOBYF1PX', '7b5cb1cfd32091ade772492262a88989');
+  const client = algoliasearch('VPPOBYF1PX', '091510b9b683bba2cb9988391ddd224c');
   return client.initIndex('telescope');
 }
 
