@@ -39,9 +39,8 @@ command to do an interactive rebase. This will allow you to merge multiple commi
 ## How to run locally
 
 1. Clone this repo.
-2. Run `npm install` to install the packages.
-3. Run `npm run postinstall`
-4. Run `npm run watch`
+2. Run `yarn install` to install the packages.
+3. Run `yarn watch`
 
 This process will link the `.sketchplugin` file into your Sketch's plugin folder.
 
