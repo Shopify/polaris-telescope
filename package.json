@@ -22,19 +22,20 @@
     "postinstall": "yarn run build && skpm-link"
   },
   "devDependencies": {
-    "@skpm/builder": "^0.5.4",
+    "@skpm/builder": "^0.5.13",
     "@skpm/extract-loader": "^2.0.2",
-    "algoliasearch": "^3.26.0",
-    "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "eslint-plugin-shopify": "^21.0.1",
+    "algoliasearch": "^3.32.0",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.1",
+    "eslint-plugin-shopify": "^26.1.2",
     "html-loader": "^0.5.5",
-    "node-sass": "^4.8.3",
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "sass-loader": "^7.0.1",
-    "style-loader": "^0.21.0"
+    "node-sass": "^4.11.0",
+    "prettier": "^1.16.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
   },
   "dependencies": {
     "sketch-module-web-view": "^0.2.6"

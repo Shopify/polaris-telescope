@@ -2,6 +2,7 @@ import React from 'react';
 
 import pluginCall from 'sketch-module-web-view/client';
 
+import bridgeHandler from '../assets/javascript/handlers';
 import {
   EmptyState,
   Page,
@@ -10,7 +11,6 @@ import {
   Search,
   StyleguidePage,
 } from './components';
-import bridgeHandler from '../assets/javascript/handlers';
 
 function buttonClicked() {
   pluginCall('reportIssue');
@@ -38,7 +38,7 @@ export default class App extends React.Component {
     pluginCall('appLoaded');
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     document.addEventListener('keydown', this.onKeyDown.bind(this));
   }
 
@@ -63,20 +63,20 @@ export default class App extends React.Component {
   }
 
   setSearchRef(node) {
-    if (node == null) { return; }
+    if (node == null) {
+      return;
+    }
     this.search = node;
   }
 
   showFloatingActions() {
-    if (this.state.hasStyleguidePage) { return null; }
+    if (this.state.hasStyleguidePage) {
+      return null;
+    }
 
     return (
       <FloatingActions>
-        <Button
-          onClick={buttonClicked}
-        >
-          Report issue
-        </Button>
+        <Button onClick={buttonClicked}>Report issue</Button>
       </FloatingActions>
     );
   }
@@ -84,14 +84,13 @@ export default class App extends React.Component {
   pageContent() {
     return this.state.hasStyleguidePage ? (
       <StyleguidePage to={this.state.styleguidePagePath} />
-    )
-    : (
+    ) : (
       <EmptyState
         title={this.state.showError ? 'No Results…' : 'Get started…'}
         message={
           this.state.showError
-          ? 'Try again with a new Layer or a different search term.'
-          : 'Click on a Layer in Sketch or start to type to search.'
+            ? 'Try again with a new Layer or a different search term.'
+            : 'Click on a Layer in Sketch or start to type to search.'
         }
       />
     );
@@ -99,10 +98,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Page
-        onKeyDown={this.onKeyDown}
-        tabIndex="0"
-      >
+      <Page onKeyDown={this.onKeyDown} tabIndex="0">
         <Search
           ref={this.setSearchRef}
           query={this.state.searchQuery}

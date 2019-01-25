@@ -11,9 +11,5 @@ Page.propTypes = {
 };
 
 export default function Page({children = null}) {
-  return (
-    <main className={styles.Page}>
-      {children}
-    </main>
-  );
+  return <main className={styles.Page}>{children}</main>;
 }

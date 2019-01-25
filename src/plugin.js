@@ -6,7 +6,9 @@ export default function(context) {
   const selectedLayerName = getSelectedLayer(context);
   const handlers = {
     reportIssue: () => {
-      const nsurl = NSURL.URLWithString('https://github.com/Shopify/polaris-telescope/issues/new');
+      const nsurl = NSURL.URLWithString(
+        'https://github.com/Shopify/polaris-telescope/issues/new',
+      );
       NSWorkspace.sharedWorkspace().openURL(nsurl);
     },
     appLoaded: () => {
@@ -18,7 +20,9 @@ export default function(context) {
 }
 
 function checkForSelectedLayer(selectedLayerName) {
-  if (!selectedLayerName) { return; }
+  if (!selectedLayerName) {
+    return;
+  }
   dispatchToWebview('SEARCH', String(selectedLayerName), 'onload-sketch');
 }
 
