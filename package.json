@@ -1,7 +1,7 @@
 {
   "name": "polaris-telescope",
   "description": "Access Shopify Polaris from Sketch to speed up your design or development workflow",
-  "version": "0.9.5",
+  "version": "0.9.4",
   "engines": {
     "sketch": ">=3.0"
   },
