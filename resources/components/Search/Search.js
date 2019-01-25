@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import algoliaSearch from '../../assets/javascript/algoliaSearch';
+import trekkie from '../../assets/javascript/trekkie';
 import styles from './Search.scss';
 import Icon from './Icon';
 import Badge from './Badge';
 import ResultList from './ResultList';
-import algoliaSearch from '../../assets/javascript/algoliaSearch';
-import trekkie from '../../assets/javascript/trekkie';
 
 const BLOCKEDKEYS = [13, 16, 17, 18, 37, 38, 39, 40, 91, 93];
 
@@ -41,21 +41,29 @@ class Search extends React.Component {
     this.updateResultListScrollTop = this.updateResultListScrollTop.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.query === this.state.query) { return; }
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (nextProps.query === this.state.query) {
+      return;
+    }
 
     this.setState({query: nextProps.query}, this.forceSearch);
   }
 
   forceSearch() {
-    if (this.state.query.length === 0) { return this.dispachSearch('/'); }
+    if (this.state.query.length === 0) {
+      return this.dispachSearch('/');
+    }
     algoliaSearch(this.state.query)
       .then((content) => {
         this.updateResult(content);
         this.onBlur();
-        return this.dispachSearch(content.hits[0] ? content.hits[0].objectID : '/');
+        return this.dispachSearch(
+          content.hits[0] ? content.hits[0].objectID : '/',
+        );
       })
-      .catch();
+      .catch(() => {
+        return true;
+      });
     return true;
   }
 
@@ -65,14 +73,18 @@ class Search extends React.Component {
   }
 
   handleAlgoliaSearch() {
-    if (this.state.query.length === 0) { return; }
+    if (this.state.query.length === 0) {
+      return;
+    }
     algoliaSearch(this.state.query)
       .then((content) => this.updateResult(content))
-      .catch();
+      .catch(() => {
+        return true;
+      });
   }
 
   onMouseLeave() {
-    this.setState({active: this.state.focused});
+    this.setState((prevState) => ({active: prevState.focused}));
   }
 
   onFocus() {
@@ -118,12 +130,21 @@ class Search extends React.Component {
 
     const element = this.state.cursor;
     const elementOffsetTop = elementHeight * element;
-    const resultListHeight = Math.min(this.state.hits.length * elementHeight, maxResultListHeight);
+    const resultListHeight = Math.min(
+      this.state.hits.length * elementHeight,
+      maxResultListHeight,
+    );
 
     if (this.state.resultListScrollTop > elementOffsetTop) {
       this.setState({resultListScrollTop: elementOffsetTop});
-    } else if (elementOffsetTop + elementHeight > this.state.resultListScrollTop + resultListHeight) {
-      this.setState({resultListScrollTop: elementOffsetTop + elementHeight - resultListHeight});
+    } else if (
+      elementOffsetTop + elementHeight >
+      this.state.resultListScrollTop + resultListHeight
+    ) {
+      this.setState({
+        resultListScrollTop:
+          elementOffsetTop + elementHeight - resultListHeight,
+      });
     }
   }
 
@@ -148,7 +169,9 @@ class Search extends React.Component {
   }
 
   handleKeyUp(event) {
-    if (BLOCKEDKEYS.includes(event.keyCode)) { return; }
+    if (BLOCKEDKEYS.includes(event.keyCode)) {
+      return;
+    }
     this.handleAlgoliaSearch();
   }
 
@@ -160,13 +183,19 @@ class Search extends React.Component {
     }
 
     if (event.keyCode === 38 && cursor > 0) {
-      this.setState((prevState) => ({
-        cursor: prevState.cursor - 1,
-      }), this.updateResultListScrollTop);
+      this.setState(
+        (prevState) => ({
+          cursor: prevState.cursor - 1,
+        }),
+        this.updateResultListScrollTop,
+      );
     } else if (event.keyCode === 40 && cursor < hits.length - 1) {
-      this.setState((prevState) => ({
-        cursor: prevState.cursor + 1,
-      }), this.updateResultListScrollTop);
+      this.setState(
+        (prevState) => ({
+          cursor: prevState.cursor + 1,
+        }),
+        this.updateResultListScrollTop,
+      );
     }
 
     if (event.keyCode === 13) {
@@ -174,7 +203,11 @@ class Search extends React.Component {
       this.handleResultListClick({path: newHit.objectID, title: newHit.title});
     }
 
-    if (BLOCKEDKEYS.includes(event.keyCode) && event.keyCode != 37 && event.keyCode != 39) {
+    if (
+      BLOCKEDKEYS.includes(event.keyCode) &&
+      event.keyCode !== 37 &&
+      event.keyCode !== 39
+    ) {
       event.preventDefault();
     }
   }
@@ -184,16 +217,15 @@ class Search extends React.Component {
   }
 
   setSearchInputRef(node = null) {
-    if (node == null) { return; }
+    if (node == null) {
+      return;
+    }
     this.searchInput = node;
   }
 
   render() {
     return (
-      <form
-        className={styles.Search}
-        onSubmit={this.handleSubmit}
-      >
+      <form className={styles.Search} onSubmit={this.handleSubmit}>
         <div className={styles.InputGroup}>
           <input
             ref={this.setSearchInputRef}

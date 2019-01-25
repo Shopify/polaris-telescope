@@ -139,12 +139,14 @@ $hideToTheTop: -5px;
   opacity: 1;
   max-height: $resultListWrapperMaxHeight;
 
-  & .ResultListItem, .ResultListNoResult{
+  & .ResultListItem,
+  .ResultListNoResult {
     transform: translateY(0px);
   }
 }
 
-.ResultListItem, .ResultListNoResult {
+.ResultListItem,
+.ResultListNoResult {
   display: flex;
   height: $inputHeight;
   box-sizing: border-box;

@@ -1,14 +1,18 @@
 html,
 body,
 p,
-h1, h2, h3, h4,
+h1,
+h2,
+h3,
+h4,
 button,
 input {
   margin: 0;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "SF UI Display", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF UI Display', Helvetica,
+    Arial, sans-serif;
   background: white;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
@@ -19,7 +23,8 @@ iframe {
   border: 0;
 }
 
-ul, li {
+ul,
+li {
   margin: 0;
   padding: 0;
 }

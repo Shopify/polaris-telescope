@@ -13,11 +13,7 @@ Button.propTypes = {
 
 export default function Button({onClick, children = null}) {
   return (
-    <button
-      className={styles.Button}
-      type="button"
-      onClick={onClick}
-    >
+    <button className={styles.Button} type="button" onClick={onClick}>
       {children}
     </button>
   );

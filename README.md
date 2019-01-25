@@ -1,6 +1,5 @@
 ![cover image](https://user-images.githubusercontent.com/8864990/34141733-30476ca2-e451-11e7-92ab-a779e31d6a34.png)
 
-
 # Polaris Telescope
 
 > Access Polaris from [Sketch](https://sketchapp.com/) to speed up your design or development workflow.
@@ -16,7 +15,6 @@ Polaris Telescope can help you:
 - Search for components and copy code directly from your design environment
 - View our best practices and UX rationales while designing
 - Save time by keeping your workflow within one window
-
 
 ## Type to search
 

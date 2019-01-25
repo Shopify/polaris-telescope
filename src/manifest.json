@@ -1,8 +1,8 @@
 {
-  "name" : "Polaris Telescope",
-  "identifier" : "shopify.polaris-telescope.search",
-  "description" : "A plugin to let everyone access Polaris directly from within Sketch.",
-  "author" : "Shopify",
+  "name": "Polaris Telescope",
+  "identifier": "shopify.polaris-telescope.search",
+  "description": "A plugin to let everyone access Polaris directly from within Sketch.",
+  "author": "Shopify",
   "compatibleVersion": 3,
   "bundleVersion": 1,
   "commands": [
@@ -26,8 +26,6 @@
   "menu": {
     "title": "Polaris Telescope",
     "isRoot": true,
-    "items": [
-      "shopify.polaris-telescope.show-plugin"
-    ]
+    "items": ["shopify.polaris-telescope.show-plugin"]
   }
 }

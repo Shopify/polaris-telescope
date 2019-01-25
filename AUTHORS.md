@@ -1,8 +1,8 @@
-Maintainer
-----------
-- Shopify / [@shopify](http://www.github.com/Shopify)
+## Maintainer
 
-Original Authors
-----------------
-- Mateus Ferreira / mateus.ferreira@shopify.com / [@mateus](http://www.github.com/mateus)
-- Nikolas Klein / [@nikolasklein](http://www.github.com/nikolasklein)
+- Shopify / [@shopify](https://www.github.com/Shopify)
+
+## Original Authors
+
+- Mateus Ferreira / mateus.ferreira@shopify.com / [@mateus](https://www.github.com/mateus)
+- Nikolas Klein / [@nikolasklein](https://www.github.com/nikolasklein)

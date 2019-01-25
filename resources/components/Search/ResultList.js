@@ -19,7 +19,7 @@ class ResultList extends React.Component {
     this.setResultListRef = this.setResultListRef.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
       active: nextProps.active,
       hits: nextProps.hits,
@@ -33,7 +33,9 @@ class ResultList extends React.Component {
   }
 
   setResultListRef(node) {
-    if (node == null) { return; }
+    if (node == null) {
+      return;
+    }
     this.resultListNode = node;
   }
 
@@ -50,12 +52,16 @@ class ResultList extends React.Component {
   }
 
   listItem(hit, itemKey) {
-    let listItemClassName = this.props.cursor === itemKey
-      ? [styles.ResultListItem, styles.ResultListItemSelected].join(' ')
-      : [styles.ResultListItem];
+    let listItemClassName =
+      this.props.cursor === itemKey
+        ? [styles.ResultListItem, styles.ResultListItemSelected].join(' ')
+        : [styles.ResultListItem];
 
     if (this.state.activePath === hit.objectID) {
-      listItemClassName = [styles.ResultListItem, styles.ResultListItemActive].join(' ');
+      listItemClassName = [
+        styles.ResultListItem,
+        styles.ResultListItemActive,
+      ].join(' ');
     }
 
     return (
@@ -66,12 +72,8 @@ class ResultList extends React.Component {
         onMouseOver={this.props.onListItemHover.bind(null, itemKey)}
         onClick={this.onAction.bind(null, hit)}
       >
-        <span>
-          {hit.title}
-        </span>
-        <span>
-          {hit.category}
-        </span>
+        <span>{hit.title}</span>
+        <span>{hit.category}</span>
       </li>
     );
   }

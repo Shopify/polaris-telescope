@@ -11,9 +11,5 @@ FloatingActions.propTypes = {
 };
 
 export default function FloatingActions({children = null}) {
-  return (
-    <div className={styles.FloatingActions}>
-      {children}
-    </div>
-  );
+  return <div className={styles.FloatingActions}>{children}</div>;
 }
