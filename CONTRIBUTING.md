@@ -1,4 +1,4 @@
-# Contributing to Polaris Telescope
+# Contributing to Polaris Icons
 
 Thank you for contributing! :tada:
 

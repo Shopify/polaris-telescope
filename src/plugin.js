@@ -7,7 +7,7 @@ export default function(context) {
   const handlers = {
     reportIssue: () => {
       const nsurl = NSURL.URLWithString(
-        'https://github.com/Shopify/polaris-telescope/issues/new',
+        'https://github.com/Shopify/polaris-icons/issues/new',
       );
       NSWorkspace.sharedWorkspace().openURL(nsurl);
     },
@@ -16,7 +16,7 @@ export default function(context) {
     },
   };
 
-  createWebview(context, handlers, 'Polaris Telescope');
+  createWebview(context, handlers, 'Polaris Icons');
 }
 
 function checkForSelectedLayer(selectedLayerName) {
