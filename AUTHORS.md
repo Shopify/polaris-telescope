@@ -4,5 +4,4 @@
 
 ## Original Authors
 
-- Mateus Ferreira / mateus.ferreira@shopify.com / [@mateus](https://www.github.com/mateus)
-- Nikolas Klein / [@nikolasklein](https://www.github.com/nikolasklein)
+- Dan Ross / dan.ross@shopify.com / [@danross](https://www.github.com/HYPD)

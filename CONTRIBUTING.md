@@ -21,7 +21,7 @@ By participating, you are expected to uphold this code. Please report unacceptab
 
 ### Creating issues
 
-Before submitting issues, please have a quick look if there is an existing open issue here: [Issues](https://github.com/Shopify/draggable/issues). If no related issue can be found,
+Before submitting issues, please have a quick look if there is an existing open issue here: [Issues](#). If no related issue can be found,
 please open a new issue with labels: `bug`, `feature-request` or `question`.
 
 ### Opening pull requests
