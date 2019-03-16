@@ -1,20 +1,20 @@
 {
-  "name": "polaris-telescope",
+  "name": "polaris-icons",
   "description": "Access Shopify Polaris from Sketch to speed up your design or development workflow",
   "version": "0.9.5",
   "engines": {
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "polaris-telescope",
+    "name": "polaris-icons",
     "manifest": "src/manifest.json",
-    "main": "polaris-telescope.sketchplugin"
+    "main": "polaris-icons.sketchplugin"
   },
   "resources": [
     "resources/webview.js"
   ],
   "repository": {
-    "url": "https://github.com/Shopify/polaris-telescope"
+    "url": "https://github.com/Shopify/polaris-icons"
   },
   "scripts": {
     "build": "skpm-build",
