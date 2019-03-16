@@ -24,7 +24,6 @@
   "devDependencies": {
     "@skpm/builder": "^0.5.13",
     "@skpm/extract-loader": "^2.0.2",
-    "algoliasearch": "^3.32.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.12.1",
     "eslint-plugin-shopify": "^26.1.2",

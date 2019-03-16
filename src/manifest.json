@@ -1,31 +1,21 @@
 {
-  "name": "Polaris Telescope",
-  "identifier": "shopify.polaris-telescope.search",
-  "description": "A plugin to let everyone access Polaris directly from within Sketch.",
+  "name": "Polaris Icons",
+  "identifier": "shopify.polaris-icons.search",
+  "description": "A plugin to let everyone access Polaris Icons directly from within Sketch.",
   "author": "Shopify",
   "compatibleVersion": 3,
   "bundleVersion": 1,
   "commands": [
     {
-      "name": "Search in Polaris",
-      "identifier": "shopify.polaris-telescope.show-plugin",
+      "name": "Search in Polaris Icons",
+      "identifier": "shopify.polaris-icons.show-plugin",
       "script": "./plugin.js",
       "shortcut": "command ctrl p"
-    },
-    {
-      "name": "Call onSelectionChanged",
-      "identifier": "shopify.polaris-telescope.selection-changed",
-      "script": "./selection-changed.js",
-      "handlers": {
-        "actions": {
-          "SelectionChanged.finish": "onSelectionChanged"
-        }
-      }
     }
   ],
   "menu": {
-    "title": "Polaris Telescope",
+    "title": "Polaris Icons",
     "isRoot": true,
-    "items": ["shopify.polaris-telescope.show-plugin"]
+    "items": ["shopify.polaris-icons.show-plugin"]
   }
 }

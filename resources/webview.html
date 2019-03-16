@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Polaris Telescope</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/stylesheets/webview.css"
+    />
+    <title>Polaris Icons</title>
 
     <meta charset="utf-8" />
     <meta
@@ -9,70 +14,44 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
 
-    <script type="text/javascript">
-      // Trekkie
-      (function() {
-        var config = {
-          Trekkie: {
-            appName: 'marketing-misc',
-            defaultAttributes: {
-              'plugin-identifier': 'polaris-telescope',
-              polarisInSketchVersion: '0.9.5',
-            },
-          },
-          Clickstream: {},
-        };
-        var trekkie_version = '2017.03.08';
-        var analytics = (window.analytics = window.analytics || []);
-        if (analytics.integrations) {
-          return;
-        }
-        analytics.methods = [
-          'identify',
-          'page',
-          'ready',
-          'track',
-          'trackForm',
-          'trackLink',
-        ];
-        analytics.factory = function(method) {
-          return function() {
-            var args = Array.prototype.slice.call(arguments);
-            args.unshift(method);
-            analytics.push(args);
-            return analytics;
-          };
-        };
-        for (var i = 0; i < analytics.methods.length; i++) {
-          var key = analytics.methods[i];
-          analytics[key] = analytics.factory(key);
-        }
-        analytics.load = function(config) {
-          analytics.config = config;
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.onerror = function(e) {
-            new Image().src =
-              'https://v.shopify.com/internal_errors/track?error=trekkie_load';
-          };
-          script.async = true;
-          script.src =
-            'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.' +
-            config.Trekkie.appName +
-            '.min.js?v=' +
-            trekkie_version;
-          var first = document.getElementsByTagName('script')[0];
-          first.parentNode.insertBefore(script, first);
-        };
-        analytics.load(config);
-        analytics.page();
-      })();
-    </script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0 auto;
+      }
+      #root {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+      }
+      .iframe1 {
+        position: relative;
+      }
+      .iframe1 .ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .iframe1 iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-
-    <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
-    <script src="../webview.js"></script>
+    <div id="root">
+      <div class="iframe1">
+        <img src="./assets/images/spacer700.png" />
+        <iframe
+          src="http://polaris-icons.shopify.com"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
   </body>
 </html>
