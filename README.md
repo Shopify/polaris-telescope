@@ -1,3 +1,7 @@
+Deprecated: as of July 2019, this project is no longer maintained, meaning it may not work in future versions of Sketch.
+
+---
+
 ![cover image](https://user-images.githubusercontent.com/8864990/34141733-30476ca2-e451-11e7-92ab-a779e31d6a34.png)
 
 # Polaris Telescope
